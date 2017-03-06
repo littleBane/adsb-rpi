@@ -1,4 +1,4 @@
-ADS-B Reciever for Raspberry Pi
+ADS-B Receiver for Raspberry Pi
 ===============================
 
 ## Project Overview
@@ -8,4 +8,4 @@ This project is designed to help people new to ADS-B and Raspberry Pi setup thei
 ADS-B stands for Automatic Dependent Surveillance - Broadcast which is used as a secondary radar sysem for aircraft. It means that Aircraft that are equipped with these transmitters (the "Dependent part", the system is dependent on this equipment being installed on the aircraft) will "Automatically" "Broadcast" their location, altitude, airspeed and other flight data to enable "Survaillance" by base stations. The ADS-B system also uses GPS on the aircraft to ensure accurate location data is being reported.
 
 
-WIP!! Just putting things together.
+WIP!! Just putting things to``gether.
