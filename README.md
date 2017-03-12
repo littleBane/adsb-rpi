@@ -1,5 +1,6 @@
-ADS-B Receiver for Raspberry Pi
+ADS-B Reciever for Raspberry Pi
 ===============================
+## WIP, Still have a ways to go to get this all working.
 
 ## Project Overview
 
@@ -97,4 +98,5 @@ chmod u+x setup_pi.sh
 Resources:
 Port forwarding via upnp:
 https://pavelfatin.com/access-your-raspberry-pi-from-anywhere/
+
 
