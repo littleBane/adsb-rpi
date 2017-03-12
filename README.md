@@ -1,5 +1,6 @@
-ADS-B Receiver for Raspberry Pi
+ADS-B Reciever for Raspberry Pi
 ===============================
+## WIP, Still have a ways to go to get this all working.
 
 ## Project Overview
 
@@ -7,7 +8,7 @@ This project is designed to help people new to ADS-B and Raspberry Pi setup thei
 
 ADS-B stands for Automatic Dependent Surveillance - Broadcast which is used as a secondary radar sysem for aircraft. It means that Aircraft that are equipped with these transmitters (the "Dependent part", the system is dependent on this equipment being installed on the aircraft) will "Automatically" "Broadcast" their location, altitude, airspeed and other flight data to enable "Surveillance" by base stations. The ADS-B system also uses GPS on the aircraft to ensure accurate location data is being reported.
 
-![FlightAware1090 Local Screenshot](images/flightaware_1090_local_screenshot.png)
+![FlightAware1090 Local Screenshot](https://s3.amazonaws.com/adsbrpi/flightaware_1090_local_screenshot.png)
 
 This project was initially run on the Raspberry Pi 3, though I hope to set it up on a Pi 0 very soon.
 
@@ -97,4 +98,5 @@ chmod u+x setup_pi.sh
 Resources:
 Port forwarding via upnp:
 https://pavelfatin.com/access-your-raspberry-pi-from-anywhere/
+
 
