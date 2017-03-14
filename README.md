@@ -58,6 +58,14 @@ Once the script is complete, your IP will be printed along with an SSH example c
 
 Make sure you can login to the Raspberry Pi from a remote machine. Once that is successful, you can disconnect the mouse, keyboard and monitor from the Raspberry Pi. From here on out, we will access the Raspberry Pi via another machine.
 
+# Build your own Collinear Omnidirectional Antenna
+
+
+![Setup with bought antenna](https://s3.amazonaws.com/adsbrpi/setup_bought_antenna.JPG)
+
+![Home built antenna](https://s3.amazonaws.com/adsbrpi/home_built_antenna.JPG)
+
+![Pi with FlightAware dongle](https://s3.amazonaws.com/adsbrpi/pi_with_dongle.JPG)
 
 
 
