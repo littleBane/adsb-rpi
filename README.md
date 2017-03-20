@@ -2,7 +2,7 @@
 # Raspberry Pi Based Antenna for IoT ADS-B Base Station.
 
 ## Project Overview:
-This project (still very much a work in progress) is designed to help people new to ADS-B and Raspberry Pi setup their own, affordable ADS-B receiver base station and receive broadcasts from aircraft, and use the information in the broadcasts to plot the aircraft on a web server running on the Raspberry Pi. There are multiple ADS-B data consumers so We will also feed ADS-B data to 3 different ADS-B data consumers:
+This project is designed to help people new to ADS-B and Raspberry Pi setup their own, affordable ADS-B receiver base station and receive broadcasts from aircraft, and use the information in the broadcasts to plot the aircraft on a web server running on the Raspberry Pi. There are multiple ADS-B data consumers so We will also feed ADS-B data to 3 different ADS-B data consumers:
   * [FlightAware.com]
   * [FightRadar24]
   * [OpenSky Network]
@@ -111,11 +111,96 @@ sudo /boot/pre_config.sh
 Note: The script will first prompt you to change your password, always make sure to change the password on your Raspberry Pi. Follow good password/phrase policies to make sure your Raspberry Pi stays secure and is not used in the next major DDOS attack. ;-)>
 WE change the password after SSH'ng to the Raspberry Pi, this helps avoid problems that may occur from any characters that might be interpreted differently from different keyboards. We get the Raspberry Pi on the network before changing the password, but we don't give it an external IP until we change the password to help prevent unintended remote access.
 
+You will be prompted for your wireless network name and wireless network password.
+
+Once the script is complete, your IP will be printed along with an SSH example command to login from a remote machine (SSH is for Mac/Linux; for Windows use Putty).
+
+Make sure you can login to the Raspberry Pi from a remote machine. Once that is successful, you can disconnect the mouse, keyboard and monitor from the Raspberry Pi. From here on out, we will access the Raspberry Pi via another machine.
+
+## [OpenSky-Network.org] feeder and NoIP install:
+Setup secure way to expose network traffic to OpenSky:
+Sign up for free account on no-ip. This will provide a managed DNS to make your rpi available to OpenSky and you when you are not on your home network.
+Install the No-IP client on the rpi.
+
+The setup script will walk you through the software installation and configuration on the Raspberry Pi.
+It requires the following:
+* NoIP Account info
+- email
+- password
+- it will confirm your domain assuming you only have one.
+
+# Install NoIP client.
+#Register for NoIP account.
+You will be setting up a domain for your raspberry pi.
+When prompted enter the email associated with your account.
+Next will be your password.
+Then your domain will be confirmed, if you only have one you will see something like the message below (note, replace your NoIP domain below instead of <domain_name_for_your_account>):
+    Only one host [<domain_name_for_your_account>.hopto.org>] is registered to this account.
+    It will be used.
+    
+The next prompt will look like:
+    Do you wish to run something at successful update?[N] (y/N)
+
+Just click enter to accept the default of "No".
+The NoIP installation should finish with the following messages:
+    New configuration file '/tmp/no-ip2.conf' created.
+    
+    mv /tmp/no-ip2.conf /usr/local/etc/no-ip2.conf
+    NoIP installed successfully.
+
+#TODO: Add NoIP client link:
+For installation issues, check out [this article]() and if that doesn’t help contact the support at No-IP.com.
+
+## FlightRadar24 install info:
+ #This will use the shell script to do an interactive install  the feeder and setup of the account.
+ #Need email
+ #You will be asked for a key for using a feed before, this can be ignored, just click enter.
+ #Choose yes to use participate in MLAT calculations. This will improve locations of aircraft using positions received by other antennas.
+ #lat
+ #lon
+ #altitude
+ #accept settings
+ #use autoconfig
+ #disable logging
+ #accept default logging location
+ #installation complete message
+ #You will get an email about receiver data
+ #Sign up for a premium 7 day trial: https://www.flightradar24.com/premium/signup
+ #Change username https://www.flightradar24.com/account/change-username
+ #Once you change this, click on the statistics button for your radar.
+ #It is very difficult to find this option in the menus so I suggest bookmarking the link for your radar's statistics.
+ 
+  #1 - Your ADS-B receiver is connected to this computer or is accessible over network
+  #2 - You know your antenna's latitude/longitude up to 4 decimal points and the altitude in feet
+  #3 - You have a working email address that will be used to contact you
+  #4 - fr24feed service is stopped. If not, please run: sudo service fr24feed stop
 
 ![Home built antenna](https://s3.amazonaws.com/adsbrpi/home_built_antenna2.JPG)
 
 ![Pi with FlightAware dongle](https://s3.amazonaws.com/adsbrpi/pi_with_dongle.JPG)
 
+## Explanation of the Scripts:
+#TODO: Finish script explanation.
+#What the script is doing:
+* Setup SSH:
+To enable SSH on startup, create a file called “SSH” with no extension in the boot partition.
+Enable SSH on startup.
+Login to PI
+cd ../../boot
+touch SSH
+SSH login should work on next reboot. 
+* setup wifi
+
+### Optional Hardware/Equipment:
+ * Antenna
+ ** Buy a cheap one.
+ ** Buy a more expesive one (you get for what you pay).
+ ** Build your own.
+ I personally chose to buy cheap and build my own with the goal of getting better performance from the one I build over the cheap antenna.
+
+#### Build your own Collinear Omnidirectional Antenna
+Further notes on Antennas:
+Antennas are used to transmit and receive radio waves, the antenna size and sometimes shape are relative to the frequency of the wave we are receiving. This means that a omnidirectional antenna using line of sight is best for larger wave lengths as they are less likely to penetrate dense objects. Using an omnidirectional antenna (think PVC pipe pointed at the sun at High Noon)
 
 ## Choices about software and some background on dump1090:
 #TODO: Add a hyperlink and a section below and finish section below:
@@ -142,6 +227,8 @@ https://opensky-network.org/community/projects/30-dump1090-feeder
 * Dump1090 mutability:
 https://opensky-network.org/community/projects/30-dump1090-feeder
 
+
+## License
 
 [FlightAware.com]: https://flightaware.com
 [OpenSkyNetwork.org]: http://opensky-network.org 
