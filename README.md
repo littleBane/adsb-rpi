@@ -19,7 +19,7 @@ ADS-B, Automatic Dependent Surveillance - Broadcast, is used as a secondary syst
 ADS-B data consumers collect data from receivers worldwide and use the data to do many different things including:
 
 * Keep the data permanently to make available for research. - [OpenSky-Network.org]
-* Use the data for consumer and business applications. - [FlightAware.com], [FilghtRadar24.com]
+* Use the data for consumer and business applications. - [FlightAware.com], [FlightRadar24.com]
 * Provide a real-time data fire-hose for business and consumer applications. - [FlightAware.com], [FlightRadar24.com]
 
 While building this project, I found instructions on how to feed to the individual feeders but in some cases, the instructions for one would conflict with the installation of another. This makes it a bit more difficult to make a receiver that can send the signals to multiple collectors. This project aims to simplify that process and looks toward the best of breed when deciding what to use, this means there may be a lighter solution that could be created for the Raspberry Pi 0.
