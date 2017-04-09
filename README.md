@@ -129,6 +129,17 @@ https://opensky-network.org/community/projects/30-dump1090-feeder
 Then realized dump1090-fa is based on that fork and has some nice enhancements! 
 https://github.com/mutability/dump1090
 
+## Screenshots hosted on Amazon S3:
+### Here is my [Open-SkyNetwork.org] dashboard showing my Raspberry Pi receiver.
+![OpenSky-Network.org screenshot](https://s3.amazonaws.com/adsbrpi/opensky_zoom_screenshot.png)
+### Here is my home built antenna sitting on the patio of my a building in downtown denver. I was able to use it to pick up signals as far as Wyoming and Nebraska.
+![Home built antenna](https://s3.amazonaws.com/adsbrpi/home_built_antenna2.JPG)
+### Here is the Raspberry Pi and dongle sitting inside the door of the patio. I had to have the Raspberry Pi inside and the antenna outside because of the RF blocking on the building windows.
+![Pi with FlightAware dongle](https://s3.amazonaws.com/adsbrpi/pi_with_dongle.JPG)
+### Here is a screenshot of the [FlightRadar24.com] website showing aircraft from all the receivers in their network including my Raspberry Pi!
+![FlightRadar24.com screenshot](https://s3.amazonaws.com/adsbrpi/filghtradar24_remote.png)
+
+
 ## References and Resources:
 * Setting up SSH:
 https://www.raspberrypi.org/documentation/remote-access/ssh/README.md
