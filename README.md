@@ -4,8 +4,8 @@
 ## Project Overview:
 This project is designed to help people new to ADS-B and Raspberry Pi setup their own, affordable ADS-B receiver base station and receive broadcasts from aircraft, and use the information in the broadcasts to plot the aircraft on a web server running on the Raspberry Pi. There are multiple ADS-B data consumers so We will also feed ADS-B data to 3 different ADS-B data consumers:
   * [FlightAware.com]
-  * [FightRadar24]
-  * [OpenSky Network]
+  * [FightRadar24.com]
+  * [OpenSky-Network.org]
   
   This project is setup to run on the Raspberry Pi 3 though the Raspberry Pi 2 and Raspberry Pi 0 might also be compatible. This build was able to pick up over 100 nm (nautical miles) or 185.2 km. This was with an indoor antenna placed in a window; better results can be expected with a more optimum antenna placement.
   
@@ -41,7 +41,7 @@ On the Raspberry Pi.
   * Install software to provide a light web server and web page to plot the planes on a map.
   * Install software to feed data to [FlightAware.com].
   * Install software to feed data to [OpenSky-Network.org].
-    * This step will install the NoIp client and open a port on the Wifi network to make the Raspberry Pi accessible so it can connect to (OpenSky-Network.org)[].
+    * This step will install the NoIp client and open a port on the Wifi network to make the Raspberry Pi accessible so it can connect to [OpenSky-Network.org].
   * Install software to feed data to [FlightRadar24.com].
 
 ### Hooking up the hardware and plotting aircraft:
@@ -51,7 +51,7 @@ With the Raspberry Pi configured, we will connect all the hardware and place the
 * Bonus, each service to which we feed will provide different statistics and visualizations of our data as well as access to many more features!
 
 #### Notes on the Setup:
-* There will be a step to sign up for each account at the appropriate time during the setup. We will be setting up accounts for; FlightAware, OpenSky Network, FightRadar24 and NoIP. Again, we can sign up for these accounts during the installation process which will simplify the process.
+* There will be a step to sign up for each account at the appropriate time during the setup. We will be setting up accounts for; [FlightAware.com], [OpenSky-Network.org], [FightRadar24.com] and NoIP. Again, we can sign up for these accounts during the installation process which will simplify the process.
 
 ## Prerequisites: 
 There are hardware, software, accounts and information that you must provide to complete this project. Here we will go over the different prerequisites by category.
@@ -232,4 +232,4 @@ https://opensky-network.org/community/projects/30-dump1090-feeder
 
 [FlightAware.com]: https://flightaware.com
 [OpenSky-Network.org]: http://opensky-network.org 
-[FightRadar24]: https://www.flightradar24.com
+[FightRadar24.com]: https://www.flightradar24.com
